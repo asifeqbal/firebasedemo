@@ -7,7 +7,7 @@ import {
     Text
 } from 'react-native';
 
-import {db} from '../config';
+import {db} from '../Services/config';
 
 //add item to firebase db
 let addItem =(item)=> {

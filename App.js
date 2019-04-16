@@ -8,8 +8,9 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import AddItem from './src/components/AddItem';
-import Login from './src/components/Login';
+// import AddItem from './src/components/AddItem';
+import RouterConfig from './src/Routes/index';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,10 +23,10 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-      {/* <AddItem/>       */}
-      <Login/>
-      </View>
+    
+      
+      <RouterConfig/>
+     
     );
   }
 }
