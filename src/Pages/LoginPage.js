@@ -9,7 +9,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 import LoginComponnet from '../components/LoginComponnet';
-
+import GeolocationExample from '../components/Geolocation';
 
 
 
@@ -24,6 +24,7 @@ export default class LoginPage extends Component {
 
         return (
             <View  style={styles.container}>
+               <GeolocationExample/>
                   
                 <LoginComponnet navigation ={this.props.navigation} />        
                    

@@ -6,8 +6,16 @@ import {
     Image,
     TouchableOpacity
   } from 'react-native';
+  import  Camera  from 'react-native-camera';
 
   export default class ProfileComponnet extends Component {
+
+    takePicture() {
+        this.camera
+          .capture()
+          .then((data) => console.log(data))
+          .catch(err => console.error(err));
+      }
 
     render() {
       return (
@@ -26,6 +34,15 @@ import {
                 <TouchableOpacity style={styles.buttonContainer}>
                   <Text>Opcion 2</Text> 
                 </TouchableOpacity>
+                <Camera
+                    ref={cam => {this.camera = cam}}
+                    style={styles.preview}
+                    aspect={Camera.constants.Aspect.fill}
+                    >
+                    <Text style={styles.capture} onPress={this.takePicture.bind(this)}>
+                        [CAPTURE]
+                    </Text>
+                    </Camera>
               </View>
           </View>
         </View>
